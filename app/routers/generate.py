@@ -1,5 +1,5 @@
 # backend/app/routers/generate.py
-
+import httpx
 from fastapi import APIRouter, HTTPException
 from app.models.generate_request import GenerateRequest, GenerateResponse
 from app.services.llm_service import generate_release_notes
