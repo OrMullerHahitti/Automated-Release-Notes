@@ -1,4 +1,4 @@
-# backend/app/models/generate_request.py
+# backend/app/models/LLM.py
 
 from pydantic import BaseModel
 from typing import List
