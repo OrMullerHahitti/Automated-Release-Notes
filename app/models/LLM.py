@@ -10,3 +10,12 @@ class GenerateRequest(BaseModel):
 
 class GenerateResponse(BaseModel):
     release_notes: str
+
+
+# Define Pydantic model for request parameters
+class WorkItemsRequest(BaseModel):
+    start_date: str
+    end_date: str
+    organization: str
+    project: str
+    repository: str

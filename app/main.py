@@ -4,11 +4,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import LLM
 import logging
+from app.models.LLM import WorkItemsRequest
+from app.services.azure_devops_services import *
 
 app = FastAPI(
-    title="Automated Release Notes Generator API",
-    description="API for generating release notes using an LLM.",
-    version="1.0.0"
 )
 
 # Configure logging
@@ -35,3 +34,4 @@ app.include_router(generate.router)
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the Automated Release Notes Generator API"}
+

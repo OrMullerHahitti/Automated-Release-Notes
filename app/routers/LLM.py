@@ -24,3 +24,4 @@ async def generate_release_notes_endpoint(request: GenerateRequest):
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error.")
+
