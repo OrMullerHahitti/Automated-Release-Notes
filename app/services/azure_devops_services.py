@@ -1,10 +1,10 @@
 from typing import List
 from fastapi import HTTPException
 from app.utils.requests import make_request
-
+import base_service
 #TODO: perhaps write Authentication function. there will be 3 auth in total
 #TODO: get a TOKEN for AUTH
-
+class AzureDevOpsService()
 # Function to authenticate and interact with Azure DevOps API
 async def fetch_work_items(organization: str, project: str, repository: str, start_date: str, end_date: str) -> List[dict]:
     base_url = f'https://dev.azure.com/{organization}/{project}/_apis/git/repositories/{repository}/commits'
@@ -55,3 +55,7 @@ async def fetch_work_items_linked_to_commits(organization: str, project: str, co
 
 
     return work_items
+
+async def fetch_repositories(organization, project):
+    pass
+

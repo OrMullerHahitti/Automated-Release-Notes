@@ -1,12 +1,14 @@
 # backend/app/services/llm_service.py
 
 import httpx
+
+from app.models.models import Document
 from app.utils.config import LLM_API_URL, LLM_API_KEY
 import logging
 
 logger = logging.getLogger(__name__)
 
-async def generate_release_notes(commit_messages: list) -> str:
+async def generate_response(commit_messages: list) -> str:
     headers = {
         "Authorization": f"Bearer {LLM_API_KEY}",
         "Content-Type": "application/json"
