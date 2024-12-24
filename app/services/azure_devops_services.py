@@ -36,6 +36,7 @@ class AzureDevOpsService(BasePlatform):
         pass
 
     async def fetch_sprints(self) -> List[Sprint]:
+
         pass
 # Function to authenticate and interact with Azure DevOps API
 
